@@ -1,4 +1,6 @@
 %%% Biophotonics Checkpoint 1 Data Analysis:
+%%% Take note: there are body tremors at: 3,5, 9, 13Hz, as well as 
+%%% at very low frequencies (low pass filter)->band pass dc noise
 
 % Part 1: Load the Signal Data from the Oscilloscope
 file = "randomname.dat";
@@ -30,6 +32,20 @@ freq_dev = 0.5;
 
 nb_signal = bandpass(bp_signal, [focus_freq - freq_dev, focus_freq + freq_dev], fs);
 
+% Part 5.b: Filter out any body tremor frequencies
+bt_1 = 3;
+nb_signal1 = bandpass(nb_signal, [bt_1 - freq_dev, bt_1 + freq_dev], fs);
+
+bt_2 = 5;
+nb_signal2 = bandpass(nb_signal1, [bt_2 - freq_dev, bt_2 + freq_dev], fs);
+
+bt_3 = 9;
+nb_signal3 = bandpass(nb_signal2, [bt_3 - freq_dev, bt_3 + freq_dev], fs);
+
+bt_4 = 13;
+nb_signal4 = bandpass(nb_signal3, [bt_4 - freq_dev, bt_4 + freq_dev], fs);
+
+
 % Part 6: Plot the Original Oscilloscope vs. Normalized Spectrum vs.
 % Narrowband Filtering
 figure;
@@ -46,10 +62,24 @@ xlabel("Frequency (Hz)");
 ylabel("Magnitude");
 
 subplot(3, 1, 2);
-plot(t, nb_signal);
+plot(t, nb_signal4);
 title("Narrowband Filtered Signal at 1Hz: ");
 xlabel("Time (s)");
 ylabel("Amplitude");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
