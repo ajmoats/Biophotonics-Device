@@ -1,8 +1,9 @@
-# Biophotonics-Device, by LJ Gonzales, Omar Shehab El-Din, Alexis Moats
+# Biophotonics-Device
+Disease Focus: Diabetes, Hypertension, Arterial Compliance: LJ Gonzales, Omar Shehab El-Din, Alexis Moats
 
-# This GitHub supports the Spring 2025 Biophotonics Project, defined as follows:
+This GitHub supports the Spring 2025 Biophotonics Project, defined as follows:
 
-# Disease Focus: Diabetes, Hypertension, Arterial Compliance
+
 
 # Introduction:
 As of 2022, diabetes has risen to over 800 million cases globally, affecting 1 in 10 individuals. Individuals that have high blood pressure are twice as likely to develop diabetes. These individuals exhibit a blood pressure greater than 130/80 mmHg.
