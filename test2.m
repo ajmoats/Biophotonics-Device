@@ -34,8 +34,8 @@ deltaOD2 = log10(I0_2 ./ Iout2);  % For NIR
 
 %% 3. Solve for NIRS Signals (NHbO2 and NHb)
 % Set extinction coefficients (example values; modify these as appropriate for your wavelengths)
-epsilonHbO2 = [368, 1222];  % [ε_HbO2(red), ε_HbO2(NIR)]
-epsilonHb   = [3750.12,  763.84];  % [ε_Hb(red),   ε_Hb(NIR)]
+epsilonHbO2 = [942, 1214];  % [ε_HbO2(red), ε_HbO2(NIR)]
+epsilonHb   = [6509.6,  693.44];  % [ε_Hb(red),   ε_Hb(NIR)]
 
 E = [epsilonHbO2(1), epsilonHb(1);
      epsilonHbO2(2), epsilonHb(2)];
